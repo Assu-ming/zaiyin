@@ -1,0 +1,351 @@
+/**
+ * By Assuming from 2016/07/19 
+ */
+ 
+@import 'color'; // 这个是宅印颜色表
+@import 'animate'; //这个是宅印动画 mixin
+
+
+.Print_FileList{
+	 width: 1080px;
+	 background-color: #fff;
+	 font-size: 16px;
+	 margin: 10px auto;
+	 border-radius: 3px;
+	 @include shadow;
+	 padding-bottom: 20px;
+
+	 >.header{
+		padding: 8px 0px;
+		margin-bottom: 30px;
+		border-bottom: 1px dashed #ddd;
+		>.title{
+			font-size: 18px;
+			margin-left: 18px;
+			padding-left: 12px;
+			border-left: 3px solid $color-blue;
+			color: $color-blue;
+		}
+	}
+
+	>.uploadFile{
+		text-align: center;
+		.uploadFileHolder{
+			position: absolute;
+			width: 1080px;
+			height: 200px;
+
+			.ant-upload-drag{
+			cursor: default!important;
+		}
+
+		}
+		.library{
+			position: relative;
+			z-index: 100;
+			.clear{
+				position:absolute;
+				width: 100%;
+				height: 30px;
+			}
+		}
+	}
+	.uploadBtn{
+
+			width: 300px;
+			height: 70px;
+			padding: 5px;
+			border-radius: 5px;
+			margin: 30px auto;
+			background-color:$color-blue;
+			color: #FFFFFF;
+		}
+
+	>.uploadFileList{
+		>.fileLoading{
+
+		}
+		>.fileCompleted{
+
+		}
+	}
+	.minfont{
+		font-size:12px;
+	}
+
+
+	.opAll{
+		position: relative;
+		width:1000px;
+		height: 100px;
+		margin:30px auto; 
+		border:2px dashed #ddd;
+		border-radius: 4px;
+		overflow: hidden;
+
+		.inf{
+			position: absolute;
+			height: 50px;
+			width: 500px;
+			top: 50%;
+			margin:-25px 30px;
+			color: #006699;
+		}
+
+		.clear{
+			width: 120px;
+			float: right;
+			height: 1px;
+		}
+	}
+
+	.loadAgain{
+		margin-top:80px;
+		text-align: center;
+	}
+
+	
+}
+
+.Print_file{
+	position: relative;
+	width:1000px;
+	margin:30px auto; 
+	border:1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+
+	.fixHeight{
+		position: relative;
+		height: 100px;
+	}
+	.H_setting{
+				position: absolute;
+				display: block;
+				top: 40px;
+				right: 110px;
+				width: 50px;
+				font-size: 14px;
+				color: #006699;
+				margin-right: 5px;
+				button{
+					background-color:white;
+					border:none;
+					cursor: pointer;
+				}				
+			}
+	.setting{
+		position: relative;
+		display: block;
+		font-size: 14px;
+		left: 45%;
+
+		.printArea{
+			margin: 10px;
+			display: inline-block;
+		}
+		.Holderborder{
+			margin-left: 10px;
+			display:inline-block;
+			border:1px solid #ddd;
+			border-radius: 3px;
+
+			input{
+				display: inline-block;
+				padding-top: 3px;
+				border:none;
+				&:focus{
+				outline:none;
+			};
+			}
+		}
+		.input{
+			display: inline-block;
+			width: 35px;
+			padding-top: 3px;
+			border:none;
+			text-align: center;
+			&:focus{
+				outline:none;
+			};
+		}
+	}
+	img{
+		width: 55px;
+	}
+	.logoHolder{
+		position: absolute;
+		display: inline-block;
+		margin-top: 10px;
+		width: 100px;
+		height: 80px;
+		border-right: 1px solid #ddd;
+		text-align: center;
+	}
+	.fileInf{
+		position: absolute;
+		top: 50%;
+		height: 40px;
+		margin: -20px 0;
+		left: 110px;
+		display: inline-block;
+
+		>.Sourse{
+			font-size: 14px;
+			color: #999999;
+		}
+	}
+	.delete{
+		width: 120px;
+		height: 70px;
+		border-left:1px solid #ddd;
+		float: right;
+		right: 0;
+		margin: 15px auto 0 auto;
+		font-size:14px;
+		&:hover{cursor:pointer;};
+		
+		>.Load_del{
+			position: relative;
+			width: 100px;
+			height: 18px;
+			top: 50%;
+			margin: -9px auto;
+			text-align: center;
+		}
+		>.Com_del{
+			position: relative;
+			width: 85px;
+			height: 56px;
+			top: 50%;
+			margin: -28px auto;
+			line-height: 2em;
+		}
+	}
+	.loadingInf{
+		position: absolute;
+		width: 200px;
+		height: 60px;
+		top: 50%;
+		margin: -30px auto 0 auto;
+		right: 120px;
+		color: rgb(0, 102, 153);
+		text-align: center;
+
+	}
+	.failFont{
+	font-size: 20px;
+	color:#FF0000;
+	}
+	.successFont{
+		font-size: 20px;
+		color: rgb(0, 153, 102)
+	}
+	.loadingFont{
+		font-size: 20px;
+		color: rgb(0, 102, 153);
+	}
+
+
+	>.bar{
+		height: 100px;
+	}
+	
+}
+div.ant-upload-drag{
+	border: none!important;
+}
+
+.Print_file_printChoice{
+		ul{
+			float: right;
+			display: block;
+			height: 70px;
+			margin: 15px 0;
+			margin-right: 50px;
+
+		}
+		li{
+			position: relative;
+			display: block;
+			float: left;
+			width: 75px;
+			text-align: center;
+			margin: 0 10px;
+		
+			.numBtn{
+   				border: none;
+    			border-radius: 14px;
+    			background-color: transparent;
+				display: block;
+				margin: 5px;
+				font-size: 5px;
+				width: 10px;
+				&:hover{
+					cursor:pointer;
+					opacity: 0.5;
+					background-color: #d4d4d4
+				};
+
+				
+			}
+
+			.fileNum{
+					width: 35px;
+					float: right;
+					padding-top: 3px;
+					border:none;
+					text-align: center;
+					&:focus{
+						outline:none;
+					};
+				}
+			}	
+
+		.choiceBox{
+
+			position: relative;
+			width: 80px;
+			height: 30px;
+			border-radius: 15px;
+			border: 1px solid  #CCC;
+			margin-top: 10px;
+			cursor: pointer;
+			.drop{
+				display: block;
+				font-size: 16px!important;
+				text-align: center;
+				margin-top: 2px;
+			}
+		}
+		.slideBox{
+			display: block;
+			position: relative;
+			margin-top: -1px;
+			border-radius: 15px;
+			border: 1px solid #666;
+			width: 60px;
+			height: 30px;
+			text-align: center;
+			background-color: inherit;
+			line-height: 1.8;
+			width: 60px;
+			cursor: pointer;
+		    -webkit-transition-property: all;
+		    -moz-transition-property: all;
+		    transition-property: all;
+		    -webkit-transition-duration: 0.2s;
+		    -moz-transition-duration: 0.2s;
+		    transition-duration: 0.2s;
+		    -webkit-transition-timing-function: ease-out;
+		    -moz-transition-timing-function: ease-out;
+		    transition-timing-function: ease-out;
+		    -webkit-transition-delay: 0s;
+		    -moz-transition-delay: 0s;
+		    transition-delay: 0s;
+		}
+	.BtnDisabled{
+		opacity: 0.4;
+	}
+	.BtnEnabled{}
+}

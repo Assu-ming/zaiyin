@@ -1,0 +1,22 @@
+/**
+ * 例子样式 //这里备注样式的基本信息，如名称
+ * By Birdy from 2016/05/27  // 这里按照这种格式备注作者和开始日期
+ */
+ 
+ //按需引入需要用到 变量/mixin
+ @import 'color'; // 这个是宅印颜色表
+ @import 'animate'; //这个是宅印动画 mixin
+ 
+ .example{
+	 
+	 .test1{
+		 color: #111;
+	 }
+	 
+	 .test2{
+		 font-size: 16px;
+		 .test3{
+			 color: #222;
+		 }
+	 }
+ }

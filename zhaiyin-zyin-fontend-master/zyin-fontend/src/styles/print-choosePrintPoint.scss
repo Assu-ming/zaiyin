@@ -1,0 +1,217 @@
+/**
+ * 例子样式 
+ * By BirdyLee from 2016/07/17  
+ */
+ 
+@import 'color'; // 这个是宅印颜色表
+@import 'animate'; //这个是宅印动画 mixin
+ 
+ .print-choosePrintPoint{ 
+	 width: 1080px;
+	 background-color: #fff;
+	 margin: 10px auto;
+	 border-radius: 3px;
+	 @include shadow;
+
+	 padding-bottom: 20px;
+
+	 >.header{
+		padding: 8px 0px;
+		border-bottom: 1px dashed #ddd;
+		>.title{
+			font-size: 18px;
+			margin-left: 18px;
+			padding-left: 12px;
+			border-left: 3px solid $color-blue;
+			color: $color-blue;
+		}
+	}
+
+	>.choose-point{
+
+		//display: none;
+
+		//padding-bottom: 5px;;
+
+		.selector-group{
+			text-align: center;
+			margin: 22px auto 10px;
+			>div{
+				width: 160px;
+				margin: 0px 20px;
+			}
+			.tip{
+				font-size: 14px;
+				color: $color-blue;
+				margin-right: 20px;
+			}
+		}
+
+		.print-point-list{
+			width: 880px;
+			margin: 10px auto;
+
+		}
+
+	}
+
+	.print-point-item{
+		display: inline-block;
+		vertical-align: top;
+		width: 400px;
+		height: 168px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		margin: 10px 20px;
+		cursor: pointer;
+		&:hover{
+			box-shadow: 0px 0px 4px 2px #EEE;
+		}
+		@include transAm;
+
+		.pic-div{
+			vertical-align: top;
+			display: inline-block;
+			width: 138px;
+			height: 138px;
+			border-right: 1px dashed #ddd;
+			img{
+				width: 84%;
+				margin: 8%;
+			}
+		}
+		.detial-div{
+			vertical-align: top;
+			display: inline-block;
+			width: 250px;
+			padding-left: 20px; 
+			border: none;
+
+			.point-name{
+				font-size: 18px;
+				color: $color-blue;
+				margin-top: 10px;
+			}
+
+			.addr{
+				color: #096;
+				margin-top: 4px;
+				font-size: 14px;
+
+				i{
+					margin-right: 6px;
+				}
+			}
+
+			.print-type{
+				margin-top: 8px;
+			}
+		}
+		.announce-div{
+			display: inline-block;
+			width: 100%;
+			color: #f63;
+			border-top: 1px solid #eee;
+			text-align: center;
+			padding-top: 5px;
+		}
+		.no{
+			color: #ccc;
+		}
+	}
+
+
+	.point-detial{
+		.title{
+			width: 840px;
+			margin: 10px auto;
+			padding: 10px 0px 6px;
+
+			.back{
+				font-size: 14px;
+				line-height: 14px;
+				color: #999;
+				margin-right: 16px;
+				background: transparent;
+				border: none;
+				&:hover{
+					color: #000;
+				}
+				cursor: pointer;
+			}
+
+			.tip{
+				border-left: 1px solid #bbb;
+				font-size: 16px;
+				line-height: 16px;
+				color: #096;
+				padding-left: 16px;
+			}
+		}
+
+		.point-box{
+			width: 840px;
+			height: 170px;
+			border: 1px solid #ddd;
+			margin: 0px auto;
+			border-radius: 4px;
+			.print-point-item{
+				margin: 0px;
+				border: none;
+				height: 140px;
+				cursor: auto;
+				&:hover{
+					box-shadow: none;
+				}
+			}
+
+			.announce-div{
+				width: 100%;
+				text-align: center;
+				border-top: 1px solid #eee;
+				padding-top: 4px;
+				color: #f63;
+			}
+
+			.price{
+				display: inline-block;
+				width: 430px;
+				border-left: 1px dashed #ddd;
+				.price-title{
+					text-align: center;
+					color: $color-blue;
+					font-size: 18px;
+					margin-top: 10px;
+					i{
+						padding-right: 10px;
+					}
+				}
+				.price-list{
+					margin: 10px auto;
+					width: 400px;
+					.price-item{
+						width: 80px;
+						height: 60px;
+						border: 1px solid #ddd;
+						display: inline-block;
+						vertical-align: top;
+						margin: 10px;
+						text-align: center;
+						.price-name{
+							width: 100%;
+							margin-top: 6px;
+						}
+						.money{
+							width: 100%;
+							font-size: 22px;
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+
+
+ }

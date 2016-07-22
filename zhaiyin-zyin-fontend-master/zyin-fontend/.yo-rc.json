@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "reduxTest",
+    "style": "scss",
+    "postcss": true
+  }
+}

@@ -1,0 +1,44 @@
+/**
+ * 这个是公用 css 样式， 这里面的类在应用加载时就会加载
+ * 为了防止冲突，均使用 zy 作为前缀
+ */
+@import 'color'; 
+@import 'animate';
+
+button,a{
+	outline: none !important;
+}
+
+body{
+	background: #f2f2f2;
+}
+
+ 
+/**** 普通html组件样式 ****/
+.zy-btn {
+	border: none;
+	color: #fff;
+	background-color: $color-blue;
+	padding: 6px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	&:hover{
+		background-color: $color-blue-deep;
+	}
+	&:active{
+		@include scale($s:.98);
+	}
+	@include transAm($duration:0.1s);
+}
+
+ 
+/**** 动画样式 ****/
+
+.zy-fadeIn {
+	@include fadeIn; 
+}
+
+.zy-zoomIn {
+	@include zoomIn; 
+}
+ 

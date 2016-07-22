@@ -1,0 +1,23 @@
+@import 'animate';
+
+.default-component{
+  
+	.order-item{
+		border: 1px solid #ddd;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    line-height: 22px;
+    .status{
+      color: #069;
+      font-weight: 600;
+    }
+	}
+  
+  button{
+    margin: 6px;
+  }
+  
+  @include fadeAndZoomIn;
+}

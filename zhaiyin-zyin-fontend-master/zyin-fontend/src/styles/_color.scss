@@ -1,0 +1,14 @@
+/**
+ * 宅印颜色表，请使用color 开头
+ * by Birdy at 2016/05/28
+ */
+
+$color-blue : #0E90D2;
+$color-blue-light : #1EA0E2;
+$color-blue-deep : #0283C4;
+
+@mixin shadow{
+	box-shadow: 0px 0px 4px 1px #DDD;
+	
+	
+}

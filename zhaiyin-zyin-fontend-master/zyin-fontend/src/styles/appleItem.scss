@@ -1,0 +1,47 @@
+.appleItem{
+	
+	height: 60px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin: 10px 20px;
+	
+	.apple{
+		float: left;
+		height: 100%;
+		margin: 0px 10px;
+		img{
+			padding: 5%;
+			height: 100%;
+		}
+	}
+	
+	.info{
+		float: left;
+		height: 100%;
+		padding-top: 8px;
+		
+		.name{
+			font-size: 16px;
+			color: #069;
+		}
+		.weight{
+			font-size: 14px;
+			color: #888;
+		}
+	}
+	
+	.btn-div{
+		float: right;
+		line-height: 58px;
+		margin-right: 10px;
+		button{
+			line-height: 28px;
+			color: #fff;
+			background: #069;
+			border: none;
+			border-radius: 5px;
+			padding: 0px 20px;
+		}
+	}
+	
+}
